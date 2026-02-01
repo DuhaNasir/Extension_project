@@ -7,8 +7,7 @@ function App() {
 
 
   {/* header*/}
-<div className=" flex justify-between   bg-white  rounded-xl shadow-md my-8 mx-5 md:mx-15 border border-[#ededed] p-2 h-12
- " > 
+<div className=" flex justify-between   bg-white  rounded-xl shadow-md my-8 mx-5 md:mx-15 border border-[#ededed] p-2 h-12" > 
  
 <img src="/images/logo.svg" alt="logo" className=" w-40 h-30 pb-22 "/>
 
@@ -54,12 +53,12 @@ function App() {
 
 {/*card 1 */}
 
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede]  ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
-<div className="flex justify-start">
+<div className="flex justify-start ">
 <img  src="/images/logo-devlens.svg"   className=" mt-2 ml-4"/>
-<div className="flex flex-col gap-2"> 
+<div className="flex flex-col "> 
 <h1 className="font-bold text-1xl text-[#091540] mt-4 ml-3  ">DevLens</h1>
 <p  className=" text-[#7c7b7b]  text-sm ml-3 "  >Quickly inspect page layouts and visualize element boundaries.</p>
 </div>
@@ -67,7 +66,7 @@ function App() {
 
 
 
-<div className="flex justify-between gap-4 px-3 pt-12 md:pt-16 ">
+<div className="flex justify-between gap-4 px-3 mt-auto pb-4 ">
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
    <div className="flex flex-wrap items-center justify-center gap-12 ">
@@ -88,7 +87,7 @@ function App() {
 
 
 {/*card 2 */}
-<div className="bg-white rounded-2xl h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl h-52 border border-[#e0dede] flex flex-col ">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -101,7 +100,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -123,7 +122,7 @@ function App() {
 
 
 {/*card 3 */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col  ">
     
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -136,7 +135,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3   mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -155,7 +154,7 @@ function App() {
 
 
 {/*card 4 */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col ">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -171,7 +170,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -189,9 +188,8 @@ function App() {
 
 </div>
 
-
 {/*card 5 */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -207,7 +205,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -229,7 +227,7 @@ function App() {
 
 
 {/*card 6 */}
-<div className="bg-white rounded-2xl h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl h-52 border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -246,7 +244,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3   mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -269,7 +267,7 @@ function App() {
 
 
 {/*card 7 */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -286,7 +284,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3 mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -307,7 +305,7 @@ function App() {
 
 
 {/*card 8 */}
-<div className="bg-white rounded-2xl  h-52  border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52  border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -323,7 +321,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3 mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -346,7 +344,7 @@ function App() {
 
 
 {/*card 9 */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col ">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -363,7 +361,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3 mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -384,7 +382,7 @@ function App() {
 
 {/*card 10 */}
 {/*background */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col ">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -397,7 +395,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -419,7 +417,7 @@ function App() {
 
 {/*card 11 */}
 {/*background */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col ">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -432,7 +430,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
@@ -456,7 +454,7 @@ function App() {
 
 {/*card 12 */}
 {/*background */}
-<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] ">
+<div className="bg-white rounded-2xl  h-52 border border-[#e0dede] flex flex-col">
 
 {/* div for img and text to align items to the start*/}
 <div className="flex justify-start">
@@ -469,7 +467,7 @@ function App() {
 
 
 {/* buttoms */}
-<div className="flex justify-between gap-4 px-3  pt-12 md:pt-16">
+<div className="flex justify-between gap-4 px-3  mt-auto pb-4">
  {/* Remove buttom */}
 <button className="bg-white rounded-full text-[#091540] text-sm border border-[#e0dede] h-8 w-20  hover:bg-[#c7221a] hover:text-white "> Remove </button>
 {/*Toggle buttom */}
