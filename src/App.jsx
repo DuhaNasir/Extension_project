@@ -3,7 +3,7 @@ function App() {
 
   return (
     
-<div className=" h-screen bg-[#EEF8F9]" >
+<div className="" >
 
 
   {/* header*/}
