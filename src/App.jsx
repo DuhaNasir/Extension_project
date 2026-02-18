@@ -48,7 +48,7 @@ function App() {
 
 
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  md:gap-4 px-11 pb-16 " >
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  md:gap-4 px-3 pb-16 " >
 {/* cards*/}
 
 {/*card 1 */}
