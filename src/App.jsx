@@ -10,7 +10,6 @@ const [data, setData] = useState([]);
 const [error, setError] = useState(null);   
 const [loading, setLoading] = useState(true);
 
-//إعداد API
 const api= axios.create({
   baseURL:'https://base-tamimha.techwin.sa/api'
 })
@@ -34,18 +33,17 @@ setData(response.data.data);
 };
 
 
-
-//fetch data when the component mounts
+//fetch data when the component starts
 useEffect(() => {
 getData();
 },[]);
 
 if (loading) {
-    return <p className="text-center font-bold mt-10">Loading...</p>;
+    return <p className=" text-center font-bold ">Loading...</p>;
   }
 
   if (error) {
-    return <p className="text-center font-bold mt-10 text-red-500">{error}</p>;
+    return <p className="text-center font-bold  text-red">{error}</p>;
   }
 
 
@@ -96,7 +94,7 @@ if (loading) {
 
 
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  md:gap-4 px-3 pb-16 " >
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  md:gap-4 px-6 pb-16 " >
 {/* cards*/}
 {data.map((item) => (
     <Card
