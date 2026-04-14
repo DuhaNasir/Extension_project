@@ -1,4 +1,4 @@
-
+import AddCardForm from './components/AddCardForm';
 import { useState , useEffect } from 'react' //usestate to save the data and useeffect to fetch data when the component mounts
 import axios from 'axios'; //axios to make http requests
 import Card from './components/Card'; 
@@ -13,6 +13,24 @@ const [loading, setLoading] = useState(true);
 const api= axios.create({
   baseURL:'https://base-tamimha.techwin.sa/api'
 })
+
+// function to add new card
+const addCard=async(formData)=>{
+  try {
+    setError(null);
+await api.post("/cards/create" , formData);
+getData(); 
+
+  }catch(error){
+    setError(error.message);
+
+
+  }finally{
+    setLoading(false);
+  }
+};
+
+
 
 
 // function to fetch data from api
@@ -110,6 +128,7 @@ if (loading) {
 
 </div>
 
+<AddCardForm onAddCard={addCard} />
 </div>
     
   )
