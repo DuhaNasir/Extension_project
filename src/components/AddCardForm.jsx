@@ -5,9 +5,9 @@ export default function AddCardForm({onAddCard}) {
 //state to save the form data
 const [title, setTitle] = useState('');
 const [description, setDescription] = useState('');
-const [icon, setIcon   ] = useState(null);   
+const [icon, setIcon ] = useState(null);   
 
-//
+
 const handleSubmit = async (e) => {
 e.preventDefault(); //تمنع الصفحه من انها تتحمل كلها 
 
@@ -29,15 +29,21 @@ setIcon(null);
   
 return (
 
+<div className='  '>
+<form onSubmit={handleSubmit} className="bg-white rounded-2xl   border border-[#e0dede] flex flex-col md:w-md  p-4 gap-4 mx-5  mb-10  ">
+<h1 className='font-bold text-center py-3 '>Add another card</h1>
 
-<form onSubmit={handleSubmit} className="bg-white rounded-2xl  w-min border border-[#e0dede] flex flex-col p-4 gap-4 mx-5 md:mx-15 mb-10  ">
-    <h1 className='font-bold text-center py-3 '>Add New Card</h1>
+
 <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className=' px-3 border border-[#e0dede] rounded-xl hover:border-[#c7221a]' />
-<textarea rows="5" cols="5" value={description} onChange={(e) => setDescription(e.target.value)}  placeholder="Description" className='p-3 border border-[#e0dede] rounded-xl hover:border-[#c7221a]'></textarea>
-<input type="file" onChange={(e) => setIcon(e.target.files[0])}   className='px-3  border border-[#e0dede] rounded-xl  hover:border-[#c7221a]' />
-<input type="submit" value="Add Card" className=" bg-[#c7221a] rounded-full px-3 text-white border border-[#c7221a]  hover:bg-white hover:text-[#091540]   flex justify-center items-center" />
-</form>
 
+<textarea rows="5" cols="5" value={description} onChange={(e) => setDescription(e.target.value)}  placeholder="Description" className='p-3 border border-[#e0dede] rounded-xl hover:border-[#c7221a]'></textarea>
+
+<input type="file" onChange={(e) => setIcon(e.target.files[0])}   className='px-3  border border-[#e0dede] rounded-xl  hover:border-[#c7221a]' />
+
+<input type="submit" value="Add Card" className=" bg-[#e8362c] rounded-full px-3 text-white border border-[#c7221a]  hover:bg-[#c7221a]   " />
+
+</form>
+</div>
 
 
 

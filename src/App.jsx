@@ -1,69 +1,13 @@
 import AddCardForm from './components/AddCardForm';
-import { useState , useEffect } from 'react' //usestate to save the data and useeffect to fetch data when the component mounts
-import axios from 'axios'; //axios to make http requests
 import Card from './components/Card'; 
-
-
+import useCards from './hooks/useCards';
+import Header from './components/Header'; 
 function App() {
 
-const [data, setData] = useState([]);
-const [error, setError] = useState(null);   
-const [loading, setLoading] = useState(true);
+const { data, loading, error, addCard } = useCards();
 
-const api= axios.create({
-  baseURL:'https://base-tamimha.techwin.sa/api'
-})
-
-// function to add new card
-const addCard=async(formData)=>{
-  try {
-    setError(null);
-await api.post("/cards/create" , formData);
-getData(); 
-
-  }catch(error){
-    setError(error.message);
-
-
-  }finally{
-    setLoading(false);
-  }
-};
-
-
-
-
-// function to fetch data from api
-const getData=async()=>{
-  try {
-    setError(null);
-const response = await api.get("/cards");
-setData(response.data.data);
-
-
-  }catch(error){
-    setError(error.message);
-
-
-  }finally{
-    setLoading(false);
-  }
-};
-
-
-//fetch data when the component starts
-useEffect(() => {
-getData();
-},[]);
-
-if (loading) {
-    return <p className=" text-center font-bold ">Loading...</p>;
-  }
-
-  if (error) {
-    return <p className="text-center font-bold  text-red">{error}</p>;
-  }
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     
@@ -71,14 +15,7 @@ if (loading) {
 
 
   {/* header*/}
-<div className=" flex justify-between   bg-white  rounded-xl shadow-md my-8 mx-5 md:mx-15 border border-[#ededed] p-2 h-12" > 
- 
-<img src="/images/logo.svg" alt="logo" className=" w-40 h-30 pb-22 "/>
-
-<button className="   bg-[#ededed] rounded-sm px-2 py-1 w-8 h-8   hover:bg-[#c8c6c6] ">
-<img src="/images/icon-moon.svg" alt="icon-moon" className="size-6 "></img>
-</button>
-</div>
+  <Header />
 
 
   {/* Extensions list ,all,active,inactive*/}
