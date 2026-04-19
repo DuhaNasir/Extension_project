@@ -2,12 +2,15 @@ import AddCardForm from './components/AddCardForm';
 import Card from './components/Card'; 
 import useCards from './hooks/useCards';
 import Header from './components/Header'; 
+
 function App() {
 
-const { data, loading, error, addCard } = useCards();
+const { data, loading, error, addCard , deleteCard } = useCards();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
+
+
 
   return (
     
@@ -51,12 +54,12 @@ const { data, loading, error, addCard } = useCards();
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  md:gap-4 px-6 pb-16 " >
 {/* cards*/}
-{data.map((item) => (
+{data.map((card) => (
     <Card
-      key={item.id}
-      title={item.title}
-      description={item.description}
-      icon={item.icon}
+      key={card.id}
+      card={card}
+     deleteCard={deleteCard}
+
     />
 
 

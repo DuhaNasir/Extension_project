@@ -42,10 +42,25 @@ setData(response.data.data);
   }
 };
 
+  const deleteCard= async (id) => {
+    try{
+    await Api.delete(`cards/delete/${id}`);
+    getData();
+  }catch(error){
+    setError(error.message);
+
+
+  }finally{
+    setLoading(false);
+  }
+}
+
+
+
 
 //fetch data when the component starts
 useEffect(() => {
 getData();
 },[]);
 
-return { data, loading, error, addCard };}
+return { data, loading, error, addCard ,deleteCard  };}
